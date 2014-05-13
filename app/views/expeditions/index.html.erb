@@ -1,4 +1,4 @@
-<h1>Listing expeditions</h1>
+<h1>Grid Expeditions</h1>
 
 <table>
   <thead>
@@ -22,10 +22,13 @@
         <td><%= expedition.end_date %></td>
         <td><%= expedition.qsl_info %></td>
         <td><%= expedition.more_info %></td>
+      </tr>
+      <tr>
         <td><%= link_to 'Show', expedition %></td>
         <td><%= link_to 'Edit', edit_expedition_path(expedition) %></td>
         <td><%= link_to 'Destroy', expedition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <hr>
     <% end %>
   </tbody>
 </table>

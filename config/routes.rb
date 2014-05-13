@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :expeditions
 
-  root :to => "visitors#index"
+  root :to => "expeditions#index"
 end
