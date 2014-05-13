@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grid:</strong>
+  <%= @expedition.grid %>
+</p>
+
+<p>
+  <strong>Call:</strong>
+  <%= @expedition.call %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @expedition.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @expedition.end_date %>
+</p>
+
+<p>
+  <strong>Qsl info:</strong>
+  <%= @expedition.qsl_info %>
+</p>
+
+<p>
+  <strong>More info:</strong>
+  <%= @expedition.more_info %>
+</p>
+
+<%= link_to 'Edit', edit_expedition_path(@expedition) %> |
+<%= link_to 'Back', expeditions_path %>
