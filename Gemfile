@@ -9,7 +9,6 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
@@ -17,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'high_voltage'
 
 gem 'paperclip'
+gem 'devise'
 
 group :development do
   gem 'better_errors'
@@ -27,14 +27,15 @@ group :development do
   gem 'capistrano', '~> 3.1.0'
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rails', '~> 1.1.1'
-  gem 'capistrano-rbenv', github: "capistrano/rbenv"
-  # gem 'capistrano-rvm', github: "capistrano/rvm"
+  #gem 'capistrano-rbenv', github: "capistrano/rbenv"
+  gem 'capistrano-rvm', github: "capistrano/rvm"
 end
 
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails', '>= 3.0.0.beta2'
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
