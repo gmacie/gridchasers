@@ -3,8 +3,13 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 
+# autorun is deprecated
+#require 'rspec/autorun'
+
 # treehouse 4.0 todo videos  gordon 6-6-14
 require 'capybara/rspec'
+require 'capybara/rails'
+
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -44,5 +49,7 @@ RSpec.configure do |config|
   
   # gordon 6-6-2014 from github/plataformatec/devise readme
   config.include Devise::TestHelpers, type: :controller
+  
+  config.include Capybara::DSL
 
 end

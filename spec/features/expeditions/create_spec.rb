@@ -2,17 +2,17 @@ require 'spec_helper'
 
 describe "Creating expeditions" do
 	it "redirects to the expeditions index page on success" do
-		visit "/expeditions"
+		visit "/"
 		click_link "New Expedition"
-		expect(page).to have_content("New Expedition")
+		expect(page).to have_content("New expedition")
 	
 		fill_in "Grid", with: "EN41"
 		fill_in "Call", with: "W1XYZ"
 
-		click_button "Create expedition"
+		click_button "Create Expedition"
 
         # back on the index page check content to make sure
-		expect(page).to have_content("Grid Expeditions")
+		expect(page).to have_content("Expedition was successfully created.")
 	end
 
 	it "displays an error when expedition has no grid" do
@@ -20,12 +20,12 @@ describe "Creating expeditions" do
 
 		visit "/expeditions"
 		click_link "New Expedition"
-		expect(page).to have_content("New Expedition")
+		expect(page).to have_content("New expedition")
 	
-		fill_in "Grid", with: "EN41"
+		fill_in "Grid", with: "EN4"
 		fill_in "Call", with: "W1XYZ"
 
-		click_button "Create expedition"
+		click_button "Create Expedition"
 
         # back on the index page check content to make sure
 		expect(page).to have_content("error")
