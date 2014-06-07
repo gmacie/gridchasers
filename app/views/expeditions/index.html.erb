@@ -15,7 +15,7 @@
 
   <tbody>
     <% @expeditions.each do |expedition| %>
-      <tr>
+      <tr id="<%= dom_id(expedition) %>">
         <td><%= expedition.grid %></td>
         <td><%= expedition.call %></td>
         <td><%= expedition.start_date %></td>

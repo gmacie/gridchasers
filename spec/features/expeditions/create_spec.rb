@@ -1,7 +1,10 @@
 require 'spec_helper'
 
 describe "Creating expeditions" do
-	it "redirects to the expeditions index page on success" do
+	def create_expedition(options={})
+		options[:Grid] ||= "EN91"
+		options[:Call] ||= "N4AAA"
+
 		visit "/"
 		click_link "New Expedition"
 		expect(page).to have_content("New expedition")
@@ -11,6 +14,13 @@ describe "Creating expeditions" do
 
 		click_button "Create Expedition"
 
+	end
+
+
+	it "redirects to the expeditions index page on success" do
+		
+		create_expedition
+        
         # back on the index page check content to make sure
 		expect(page).to have_content("Expedition was successfully created.")
 	end
