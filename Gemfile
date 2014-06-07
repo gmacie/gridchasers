@@ -33,11 +33,13 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails'
-  gem 'rspec-rails', '>= 3.0.0.beta2'
+  gem 'rspec-rails', '>= 3.0.1'
 end
 
 group :test do
   gem 'capybara'
+  # last check capybara was 2.2.1 on 6-6-2014
+
   gem 'database_cleaner'
   gem 'faker'
   gem 'launchy'
